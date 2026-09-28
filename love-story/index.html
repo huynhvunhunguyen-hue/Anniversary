@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta 
+name="viewport" 
+content="width=device-width, initial-scale=1.0">
+
+
+<title>
+Our Love Story ❤️
+</title>
+
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     BACKGROUND MUSIC
+===================================== -->
+
+
+<audio 
+id="bgMusic"
+loop
+preload="auto">
+
+
+<source
+src="assets/music.mp3"
+type="audio/mp3">
+
+
+</audio>
+
+
+
+
+
+<!-- FLOATING HEART -->
+
+<div id="heartsContainer"></div>
+
+
+
+
+
+
+
+
+<!-- =====================================
+     DATE PAGE
+===================================== -->
+
+
+<section 
+id="datePage"
+class="page active">
+
+
+<div class="date-card">
+
+
+<h1>
+Enter the Special Date
+</h1>
+
+
+
+
+<input
+
+id="dateInput"
+
+type="text"
+
+readonly
+
+>
+
+
+
+
+<div class="number-grid">
+
+
+<button onclick="pressNumber('1',event)">
+1
+</button>
+
+
+<button onclick="pressNumber('2',event)">
+2
+</button>
+
+
+<button onclick="pressNumber('3',event)">
+3
+</button>
+
+
+
+<button onclick="pressNumber('4',event)">
+4
+</button>
+
+
+<button onclick="pressNumber('5',event)">
+5
+</button>
+
+
+<button onclick="pressNumber('6',event)">
+6
+</button>
+
+
+
+<button onclick="pressNumber('7',event)">
+7
+</button>
+
+
+<button onclick="pressNumber('8',event)">
+8
+</button>
+
+
+<button onclick="pressNumber('9',event)">
+9
+</button>
+
+
+
+<button onclick="deleteNumber(event)">
+⌫
+</button>
+
+
+
+<button onclick="pressNumber('0',event)">
+0
+</button>
+
+
+
+<button onclick="checkDate()">
+♥
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+     BIG HEART
+===================================== -->
+
+
+<div id="bigHeart">
+
+❤️
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+     GIFT PAGE
+===================================== -->
+
+
+<section
+
+id="giftPage"
+
+class="page hidden">
+
+
+
+<div id="giftBox">
+
+
+<div class="gift-wrapper">
+
+
+<div class="gift-box">
+
+
+<div class="gift-lid">
+
+</div>
+
+
+
+<div class="gift-body">
+
+🎁
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="loading-wrapper">
+
+
+<div class="loading-bar">
+
+</div>
+
+
+</div>
+
+
+
+<p>
+
+Preparing your surprise...
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+     ENVELOPE PAGE
+===================================== -->
+
+
+<section
+
+id="letterPage"
+
+class="page hidden">
+
+
+
+<div class="letter-scene">
+
+
+
+<!-- =========================
+     ENVELOPE
+========================= -->
+
+
+<div
+
+id="envelope"
+
+class="envelope"
+
+onclick="openEnvelope()">
+
+
+
+
+
+<div class="envelope-back">
+
+</div>
+
+
+
+
+
+
+<!-- =========================
+     LETTER INSIDE ENVELOPE
+========================= -->
+
+
+<div id="letter">
+
+
+
+<div class="letter-header">
+
+A Letter For You 💌
+
+</div>
+
+
+
+
+<h2>
+
+Dear Ăm chã húi của bà chã hơm ❤️
+
+</h2>
+
+
+
+
+<p id="letterText">
+
+</p>
+
+
+
+
+
+<button id="continueBtn">
+
+Close & Continue ✨
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SMALL PAPER INSIDE -->
+
+<div class="letter-preview">
+
+For You Moazzz Moazzzz...
+
+</div>
+
+
+
+
+
+
+
+<!-- FRONT PART -->
+
+<div class="envelope-front">
+
+</div>
+
+
+
+
+
+
+
+<!-- TOP FLAP -->
+
+<div class="envelope-flap">
+
+
+<span class="open-me">
+
+OPEN ME!
+
+</span>
+
+
+</div>
+
+
+
+
+
+
+<!-- RED SEAL -->
+
+<div class="seal">
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+     SONG PAGE
+===================================== -->
+
+
+<section
+
+id="songPage"
+
+class="page hidden">
+
+
+
+
+
+<div class="couple-area">
+
+
+
+<img
+
+src="assets/couple.png"
+
+class="couple-image"
+
+>
+
+
+
+
+
+
+
+<h2 id="songTitle">
+
+</h2>
+
+
+
+
+
+
+
+<div
+
+class="spotify-card hidden">
+
+
+
+<iframe
+
+style="border-radius:12px"
+
+src="https://open.spotify.com/embed/track/5xCsdnbeg7yhVX2qlRaDUw?utm_source=generator"
+
+width="100%"
+
+height="152"
+
+frameBorder="0"
+
+allowfullscreen=""
+
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+
+loading="lazy">
+
+</iframe>
+
+
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================
+     MUSIC BUTTON
+===================================== -->
+
+
+<button
+
+id="musicButton"
+
+class="music-button">
+
+
+♫
+
+
+</button>
+
+
+
+
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+
+
+</html>
